@@ -21,10 +21,10 @@ class Test_Review_Raffle < MiniTest::Test
 		results = close_but_no_cigar(winning_num, ticket_num)
 		assert_equal(true, results)
 	end
-	# def test_off_two_returns_false
-	# 	winning_num = '1234'
-	# 	ticket_num = '1222'
-	# 	results = close_but_no_cigar(winning_num, ticket_num)
-	# 	assert_equal(true, results)
-	# end
+	def test_off_two_returns_false
+		winning_num = '1234'
+		ticket_num = '1222'
+		results = close_but_no_cigar(winning_num, ticket_num)
+		assert_equal(false, results)
+	end
 end
