@@ -28,3 +28,17 @@ class Test_Review_Raffle < MiniTest::Test
 		assert_equal(false, results)
 	end
 end
+
+class TestReturnRaffle < Minitest::Test
+
+	def test_return_empty_array
+		ticket_num = '1234'
+		winning_nums = ['5678','9999','5656']
+		assert_equal([], returning_function(ticket_num, winning_nums))
+	end
+	# def test_return_array_off_1
+	# 	ticket_num = '1234'
+	# 	winning_nums = ['3234', '5555', '6789']
+	# 	assert_equal(['3234'], returning_function(ticket_num, winning_nums))
+	# end
+end

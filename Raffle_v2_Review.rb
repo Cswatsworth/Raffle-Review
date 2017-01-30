@@ -17,4 +17,20 @@ index_position = 0
 			else
 				false
 			end
-end							
+end	
+
+def returning_function(winning_nums, ticket_num)
+		array = []
+
+		winning_nums.each do |win_num|
+
+			
+
+			if close_but_no_cigar(winning_num, ticket_num)
+				
+				array << win_num
+			end
+
+		end
+		array
+end
