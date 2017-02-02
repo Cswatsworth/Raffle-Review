@@ -1,33 +1,28 @@
-def close_but_no_cigar(winning_num, ticket_num) 
+def close_but_no_cigar(win_num, my_num) 
 					 # flase   last thing evaul. (telling it to return false)
-matches = 0
-index_position = 0
+		matches = 0
+		index_position = 0
 
-	ticket_num.length.times do
+		my_num.length.times do
 		
-			if ticket_num[index_position] == winning_num[index_position]
-				matches = matches + 1							 
+			if my_num[index_position] == win_num[index_position]
+					matches = matches + 1							 
 		
 			end											
-		index_position += 1
+			index_position += 1
 		end
-	
-	 		if matches == ticket_num.length - 1
-	 			true
-			else
-				false
-			end
+
+		my_num.length - matches == 1
+
 end	
 
-def returning_function(winning_nums, ticket_num)
+def returning_function(my_num, win_nums)
 		array = []
 
-		winning_nums.each do |win_num|
+		win_nums.each do |win_num|
 
 			
-
-			if close_but_no_cigar(winning_num, ticket_num)
-				
+			if off(win_num, my_num)
 				array << win_num
 			end
 
